@@ -1,0 +1,46 @@
+# Hammerdin Paladin Build Configuration
+# Optimized for Chaos Sanctuary and Baal runs
+
+character:
+  name: hammerdin
+  character_class: paladin
+  primary_skill:
+    name: Blessed Hammer
+    key: f1
+    is_right_click: true
+    cooldown: 0.0
+    aoe: true
+    range: 8
+  secondary_skill:
+    name: Holy Shield
+    key: f4
+    is_right_click: true
+    cooldown: 0.0
+    aoe: false
+  buff_skills:
+    - name: Holy Shield
+      key: f4
+      is_right_click: true
+      cooldown: 180.0
+  aura_skill:
+    name: Concentration
+    key: f2
+    is_right_click: false
+    cooldown: 0.0
+  teleport_key: f3
+  town_portal_key: t
+  potion_keys:
+    healing: "1"
+    mana: "2"
+    rejuv: "3"
+  merc_enabled: true
+
+navigation:
+  teleport_enabled: true
+  teleport_distance: 250
+
+routine:
+  name: chaos
+  difficulty: hell
+  max_game_time: 300.0
+  chicken_on_death: true

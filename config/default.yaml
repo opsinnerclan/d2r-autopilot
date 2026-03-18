@@ -1,0 +1,112 @@
+# D2R Autopilot - Default Configuration
+# Copy this file and customize for your setup.
+
+screen:
+  monitor_index: 1
+  game_region:
+    x: 0
+    y: 0
+    width: 1920
+    height: 1080
+  health_bar:
+    health_region:
+      x: 28
+      y: 545
+      width: 180
+      height: 30
+    mana_region:
+      x: 1710
+      y: 545
+      width: 180
+      height: 30
+    potion_threshold: 0.3
+    chicken_threshold: 0.1
+  template_match_threshold: 0.8
+
+input:
+  mouse_move_speed: 0.1
+  click_delay: 0.05
+  key_press_delay: 0.03
+  skill_cast_delay: 0.15
+  failsafe_key: f12
+
+character:
+  name: my_sorc
+  character_class: sorceress
+  primary_skill:
+    name: Blizzard
+    key: f1
+    is_right_click: true
+    cooldown: 1.8
+    aoe: true
+  secondary_skill:
+    name: Ice Blast
+    key: f2
+    is_right_click: true
+    cooldown: 0.0
+  buff_skills:
+    - name: Frozen Armor
+      key: f5
+      is_right_click: true
+      cooldown: 120.0
+    - name: Energy Shield
+      key: f6
+      is_right_click: true
+      cooldown: 120.0
+  teleport_key: f3
+  town_portal_key: t
+  potion_keys:
+    healing: "1"
+    mana: "2"
+    rejuv: "3"
+  merc_enabled: true
+
+loot:
+  enabled: true
+  pickup_radius: 300
+  show_items_key: alt
+  rules:
+    - name_pattern: ".*"
+      color: gold
+      pick_up: true
+      priority: 10
+    - name_pattern: ".*"
+      color: green
+      pick_up: true
+      priority: 9
+    - name_pattern: ".*Rune$"
+      pick_up: true
+      priority: 8
+    - name_pattern: ".*Charm.*"
+      pick_up: true
+      priority: 7
+    - name_pattern: ".*Jewel.*"
+      pick_up: true
+      priority: 6
+    - name_pattern: ".*(Ring|Amulet).*"
+      color: gold
+      pick_up: true
+      priority: 5
+    - name_pattern: ".*Monarch.*"
+      color: white
+      pick_up: true
+      priority: 4
+  stash_full_action: stop
+
+navigation:
+  teleport_enabled: true
+  teleport_distance: 300
+  stuck_timeout: 5.0
+  movement_check_interval: 0.5
+
+routine:
+  name: mephisto
+  difficulty: hell
+  max_game_time: 300.0
+  min_game_time: 10.0
+  chicken_on_death: true
+  repair_interval: 10
+  stash_interval: 5
+
+log_level: INFO
+max_runs: 0

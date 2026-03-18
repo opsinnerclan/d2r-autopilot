@@ -1,0 +1,42 @@
+# Blizzard Sorceress Build Configuration
+# Optimized for Mephisto and Ancient Tunnels farming
+
+character:
+  name: blizz_sorc
+  character_class: sorceress
+  primary_skill:
+    name: Blizzard
+    key: f1
+    is_right_click: true
+    cooldown: 1.8
+    aoe: true
+    range: 15
+  secondary_skill:
+    name: Ice Blast
+    key: f2
+    is_right_click: true
+    cooldown: 0.0
+    aoe: false
+    range: 20
+  buff_skills:
+    - name: Frozen Armor
+      key: f5
+      is_right_click: true
+      cooldown: 120.0
+    - name: Energy Shield
+      key: f6
+      is_right_click: true
+      cooldown: 120.0
+  teleport_key: f3
+  town_portal_key: t
+  potion_keys:
+    healing: "1"
+    mana: "2"
+    rejuv: "3"
+  merc_enabled: true
+
+routine:
+  name: mephisto
+  difficulty: hell
+  max_game_time: 180.0
+  chicken_on_death: true
